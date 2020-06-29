@@ -268,6 +268,7 @@ private extension YoutubeAPIViewController {
     
     @objc func swipeToHidePerform(_ gestureRecognizer: UISwipeGestureRecognizer) {
         chevronButtonBottomConstraint.constant = 0
+        hideContainerButton.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
