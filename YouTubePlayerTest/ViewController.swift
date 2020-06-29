@@ -8,13 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class YoutubeAPIViewController: UIViewController {
+    
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        /// Network
+        NetworkMaganer.shared.loadYouTubeProfiles(success: { (data) in
+            self.youtubeProfile = data
+        }) { (error) in
+            print("ERROR: NetworkMaganer.shared.loadYouTubeProfiles: ", error.localizedDescription)
+        }
+        
+        //                NetworkMaganer.shared.loadYouTubePosts(success: { (data) in
+        //                    self.postData = data
+        //                    print("postData: ", self.postData)
+        //        //            print("data: ", data)
+        //                }) { (error) in
+        //                    print("ERROR: NetworkMaganer.shared.loadYouTubePosts: ", error.localizedDescription)
+        //                }
     }
-
-
+    
+    var youtubeProfile = [YoutubeProfile.Result]()
+    var postData: YoutubePostList?
+    
 }
 

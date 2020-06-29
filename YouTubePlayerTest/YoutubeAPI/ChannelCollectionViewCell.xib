@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="ChannelCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="ChannelCollectionViewCell" customModule="YouTubePlayerTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="647" height="323"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="647" height="323"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="j4Q-4X-LUY">
+                        <rect key="frame" x="24" y="68" width="50" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="j4Q-4X-LUY" secondAttribute="height" multiplier="1:1" id="hAm-O9-21u"/>
+                            <constraint firstAttribute="height" constant="50" id="ocg-5w-I7K"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z01-3X-3FQ">
+                        <rect key="frame" x="36.5" y="82" width="25" height="21.5"/>
+                        <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Z01-3X-3FQ" secondAttribute="height" multiplier="1:1" id="6f7-hR-ebO"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ufg-p3-NFQ">
+                        <rect key="frame" x="523" y="68" width="100" height="100"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tAM-8A-esQ">
+                        <rect key="frame" x="24" y="229" width="126.5" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChannelName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-El-bwT">
+                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количетсво подписчиков" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iwC-55-etE">
+                                <rect key="frame" x="0.0" y="24" width="126.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="iwC-55-etE" firstAttribute="height" secondItem="MQg-El-bwT" secondAttribute="height" multiplier="0.5" id="Xlu-rK-7PC"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Z01-3X-3FQ" firstAttribute="centerY" secondItem="j4Q-4X-LUY" secondAttribute="centerY" id="1EM-94-zbZ"/>
+                <constraint firstItem="j4Q-4X-LUY" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="24" id="Edl-Wj-Lrl"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="tAM-8A-esQ" secondAttribute="bottom" constant="24" id="Fsd-lT-7Jt"/>
+                <constraint firstItem="ufg-p3-NFQ" firstAttribute="width" secondItem="j4Q-4X-LUY" secondAttribute="width" multiplier="2" id="G2A-PT-SMe"/>
+                <constraint firstItem="Z01-3X-3FQ" firstAttribute="width" secondItem="j4Q-4X-LUY" secondAttribute="width" multiplier="0.5" id="MVr-FM-mKB"/>
+                <constraint firstItem="ufg-p3-NFQ" firstAttribute="height" secondItem="j4Q-4X-LUY" secondAttribute="height" multiplier="2" id="Noh-Tz-3Ey"/>
+                <constraint firstItem="Z01-3X-3FQ" firstAttribute="centerX" secondItem="j4Q-4X-LUY" secondAttribute="centerX" id="VVK-lT-nvy"/>
+                <constraint firstItem="j4Q-4X-LUY" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="24" id="aQ2-Pr-qhU"/>
+                <constraint firstItem="tAM-8A-esQ" firstAttribute="leading" secondItem="j4Q-4X-LUY" secondAttribute="leading" id="kYX-7C-o5A"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ufg-p3-NFQ" secondAttribute="trailing" constant="24" id="mTw-7g-OEJ"/>
+                <constraint firstItem="ufg-p3-NFQ" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="24" id="rpL-uW-lrG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="647" height="543"/>
+            <connections>
+                <outlet property="channelImageView" destination="ufg-p3-NFQ" id="cOh-W3-esz"/>
+                <outlet property="channelSubcribersLabel" destination="iwC-55-etE" id="5gm-RA-6cb"/>
+                <outlet property="channelTitleLabel" destination="MQg-El-bwT" id="Hni-tg-iAU"/>
+                <outlet property="imagePlayBackView" destination="j4Q-4X-LUY" id="Vaf-EH-8na"/>
+            </connections>
+            <point key="canvasLocation" x="548.55072463768124" y="230.69196428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
+</document>
